@@ -6,6 +6,7 @@ Created on Tue Oct 28 11:30:11 2025
 """
 import math
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Oppgave 1
 alder = int(input("Hvilket år er du født? "))
@@ -49,7 +50,6 @@ land_value = data[land]
 print(f"{land_value[0]} er hovedstaden i {land} og det er {land_value[1]} mill. innbyggere i {land_value[0]}.")
 
 # Oppgave 5
-
 def areal_og_ytre_omkrets(a, b):
     areal_trekant = (a * b) / 2
     areal_halvsirkel = (np.pi * (a/2)**2) / 2 # Deles på 2 siden det er en halv sirkel.
@@ -69,3 +69,16 @@ areal, omkrets = areal_og_ytre_omkrets(a, b)
 
 print(f"Når grunnlinjen er {a} og høyden er {b}, blir det totale arealet {areal} og den ytre omkretsen {omkrets} ")
 
+# Oppgave 6
+x = np.linspace(-10, 10, 200)
+
+# Lager en funksjon 
+def funksjon(x):
+    return -x**2 - 5
+
+# y aksen skal være av funksjon med x som parameter 
+y = funksjon(x)
+
+# Plotter og viser grafen
+plt.plot(x, y)
+plt.show()
