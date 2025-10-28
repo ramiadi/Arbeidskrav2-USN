@@ -33,6 +33,7 @@ v_rad = grader_til_radianer(v_grad)
 print(str(v_grad) + " grader er " + str(v_rad) + " radianer.")
 
 # Oppgave 4
+# Skriver inn dictionary
 data = {
         "Norge": ["Oslo", 0.634],
         "England": ["London", 8.982],
@@ -41,5 +42,8 @@ data = {
     }
 
 land = str(input("Skriv inn et land "))
+# Denne verdien henter ut landet basert på det du har skrevet i input.
 land_value = data[land]
+# Hvis inputen samsvarer med dictionaryen, print ut dette
+# siden dictionaryen inneholder lister[], betyr det at land_value[0] (indeksen i listen) tar ut hovedstaden og land_value[1] tar ut innbyggertall
 print(f"{land_value[0]} er hovedstaden i {land} og det er {land_value[1]} mill. innbyggere i {land_value[0]}.")
