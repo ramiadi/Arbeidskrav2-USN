@@ -44,9 +44,9 @@ data = {
 
 land = str(input("Skriv inn et land "))
 # Denne verdien henter ut landet basert på det du har skrevet i input.
-land_value = data[land]
-# Siden dictionaryen inneholder lister[], betyr det at land_value[0] (indeksen i listen) tar ut hovedstaden og land_value[1] tar ut innbyggertall
-# Hvis inputen samsvarer med dictionaryen, print ut dette
+land_value = data[land] # data[land] er inputen du har skrevet ned
+# Siden dictionaryen inneholder lister[], betyr det at land_value[0] (første indeksen i listen) tar ut hovedstaden og land_value[1] tar ut innbyggertall
+# Hvis inputen data[land] du har skrevet samsvarer med dictionaryen, print ut dette
 print(f"{land_value[0]} er hovedstaden i {land} og det er {land_value[1]} mill. innbyggere i {land_value[0]}.")
 
 # Oppgave 5
@@ -70,13 +70,14 @@ areal, omkrets = areal_og_ytre_omkrets(a, b)
 print(f"Når grunnlinjen er {a} og høyden er {b}, blir det totale arealet {areal} og den ytre omkretsen {omkrets} ")
 
 # Oppgave 6
+# X aksen 
 x = np.linspace(-10, 10, 200)
 
 # Lager en funksjon 
 def funksjon(x):
     return -x**2 - 5
 
-# y aksen skal være av funksjon med x som parameter 
+# Y aksen skal være av funksjon med x som parameter 
 y = funksjon(x)
 
 # Plotter og viser grafen
