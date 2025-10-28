@@ -5,6 +5,7 @@ Created on Tue Oct 28 11:30:11 2025
 @author: ramin
 """
 import math
+import numpy as np
 
 # Oppgave 1
 alder = int(input("Hvilket år er du født? "))
@@ -14,5 +15,19 @@ print ("Du er " + str(2024 - alder) + " år gammel")
 antall_elever = int(input("Skriv inn antall elever: "))
 # Ved å bruke math.ceil, runder vi opp tallet.
 antall_pizzaer = math.ceil(antall_elever * 0.25)
-# Bruk int slik at tallet ikke blir en desimaltall.
+# Bruk int slik at tallet ikke blir en desimaltall, men en heltall.
 print("Det må handles inn ", int(antall_pizzaer))
+
+# Oppgave 3
+
+# Legg til en funksjon som skal ha en parameter
+def grader_til_radianer(v_grad):
+    #Ta med verdien fra parameter til hit
+    v_rad = v_grad * np.pi / 180
+    # Returner verdien fra regningen
+    return v_rad
+
+v_grad = float(input("Skriv inn gradtallet: "))
+# Vi har laget en funksjon, og vi tar inn v_grad som parameter 
+v_rad = grader_til_radianer(v_grad)
+print(str(v_grad) + " grader er " + str(v_rad) + " radianer.")
